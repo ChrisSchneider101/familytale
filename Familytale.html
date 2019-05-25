@@ -1,0 +1,99 @@
+<!--hurdles
+-box collision detection
+-the song
+-overlapping the same sound effect
+-sprite (mostly animating top half)
+-getting comfortable with callback functions
+
+//"hehehehe this reminds me of the time i killed a punk for murdering my wife"
+	save the "remember the time" for the transition
+"on days like these, kids like you" ~ "should be having a funny moment"
+"hehehehe this isnt even my final form"
+bird is the word thing
+-bird flocking attack
+"i miss em all" "well except meg anyway" "hehehehe" "fuck meg for some reason"
+"remember the time i wasnt dying?" 
+
+potential attacks:
+bird flocking
+bryan getting hit by a car
+
+notes:
+in fight, when the combat box needs to expand, snap peter to needed position, box smoothly expands
+in fight, peter should be "standing" just above the horizontal center of screen
+native dim: 640 x 480
+modified dim: 960 x 720	(x1.5)
+
+skew notes:
+skew(45deg) + left is half size =synced= full size 
+
+-->
+<html>
+<head>
+	<title>||Familytale||</title>
+	<link rel="stylesheet" href="Ft_css.css">
+</head>
+<body>
+<!--
+
+<div id="center_container">
+	<div id="game_space">
+		<table style="border: 1px solid white">
+			<tr><td><button id="eyes" onclick="testEye();">Change Image</button></td></tr>
+			<tr><td id="peter_space"></td></tr>
+		</table>
+	</div>
+</div>
+-->
+
+<div id="center_container">
+	<table id="game_space">
+		<tr><td class="game_td" id="peter_space" colspan="4"></td></tr>
+		<tr><td class="game_td" id="movebox_space" colspan="4"></td></tr>
+		<tr><td class="game_td" id="stats_space" colspan="4">the stats/health go here</td></tr>
+		<tr id="menu_space">
+			<td class="game_td" id="fight_space"></td>
+			<td class="game_td" id="act_space"></td>
+			<td class="game_td" id="item_space"></td>
+			<td class="game_td" id="mercy_space"></td>
+		</tr>
+		<tr><td style="height: 10px;" colspan="4"></td></tr>
+	</table>
+</div>
+
+<script src="Ft_Peter.js"></script>
+<script src="Ft_Heart.js"></script>
+<script src="KBListener.js"></script>
+<script>
+	var peter = new Peter(document.getElementById("peter_space"));
+	var box = new MoveBox(document.getElementById("movebox_space"));
+	var fight_but = new MenuButton(document.getElementById("fight_space"), "fight_button");
+	var act_but = new MenuButton(document.getElementById("act_space"), "act_button");
+	var item_but = new MenuButton(document.getElementById("item_space"), "item_button");
+	var mercy_but = new MenuButton(document.getElementById("mercy_space"), "mercy_button");
+	act_but.highlight();
+	box.heart.move(30, 45);
+	//box.resize(100, 200)
+	
+	//setInterval(advFrame, 16);
+	
+	/*var count = 0;
+	setInterval(function() {
+		item_but.img.style.filter = "hue-rotate(" + count + "deg)";
+		console.log(item_but.img.style.filter);
+		count++;
+		if (count >= 360) count = 0;
+	}, 50);*/
+	
+	//peter.startStandAni();
+	//peter.resetStance();
+	
+	//var peter = new Peter(document.getElementById("game_space"));
+	//var heart = new Heart(document.getElementById("movebox_space"));
+	//console.log(window.innerHeight);
+	//console.log(window.innerWidth);
+	
+</script>
+
+</body>
+</html>

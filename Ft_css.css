@@ -1,0 +1,73 @@
+body {
+	background-color: rgb(64, 64, 64);
+	min-width: 960px;
+	min-height: 720px;
+}
+
+.game_td {
+	border: 1px white dotted;
+	color: white;
+	vertical-align: bottom;
+	column-span: 1;
+}
+
+/*#game_space {
+	position: relative;
+	width: 960px;
+	height: 720px;
+	background-color: rgb(0, 0, 0);
+	display: inline-block;
+	text-align: center;
+}*/
+
+#peter_space {
+	height: 360px;
+	column-span: 4;
+}
+
+#movebox_space {
+	height: 260px;
+	column-span: 4;
+}
+
+#stats_space {
+	column-span: 4;
+}
+
+#menu_space {
+	height: 85px;
+}
+
+#fight_space {
+	
+}
+
+#act_space {
+	
+}
+
+#item_space {
+	
+}
+
+#mercy_space {
+	
+}
+
+#game_space {
+	width: 960px;
+	height: 720px;
+	background-color: rgb(0, 0, 0);
+	/*border: 3px white solid;*/
+	text-align: center;
+	vertical-align: bottom;
+	position: relative;
+}
+
+#center_container {
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
